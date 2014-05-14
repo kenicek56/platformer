@@ -13,6 +13,7 @@ game.PlayerEntity= me.ObjectEntity.extend ({
         this.renderable.setCurrentAnimation("idle");
         
         this.setVelocity(5, 20);
+        me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
         
     },
     update: function () {
