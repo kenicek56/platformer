@@ -39,8 +39,8 @@ game.LevelTrigger = me.ObjectEntity.extend({
     },
     onCollision: function(){
         this.collidable = false;
-        me.levelDirector.loadLevel.defer(this.level);
-        me.state.current() .resetPlayer.defer();
+        me.levelDirector.loadLevel(this.level);
+        me.state.current().resetPlayer();
     }
 });
 

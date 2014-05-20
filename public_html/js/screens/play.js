@@ -9,8 +9,6 @@ game.PlayScreen = me.ScreenObject.extend({
                 
                 this.resetPlayer();
                 
-                var player = me.pool.pull("player", 0, 200, {});
-                me.game.world.addChild(player, 10);
                 
 		// add our HUD to the game world
 		this.HUD = new game.HUD.Container();
@@ -25,9 +23,9 @@ game.PlayScreen = me.ScreenObject.extend({
 		// remove the HUD from the game world
 		me.game.world.removeChild(this.HUD);
 	},
-                resetPlayer: function(){
-            var player = me.pool.pull("player", 0, 200, {});
+        
+        resetPlayer: function(){
+                var player = me.pool.pull("player", 0, 200, {});
                 me.game.world.addChild(player, 10);
-            
-                }
+        }
 });
