@@ -36,11 +36,15 @@ game.LevelTrigger = me.ObjectEntity.extend({
         this.parent (x, y, settings);
         this.collidable = true;
         this.level = settings.level;
+        this.xSpwan=settings.xSpwan;
+        this.ySpwan=settings.ySpwan;
     },
     onCollision: function(){
         this.collidable = false;
+        var x= this.xSpwan;
+        var y=this.ySpwan;
         me.levelDirector.loadLevel(this.level);
-        me.state.current().resetPlayer();
+        me.state.current().resetPlayer(x, y);
     }
 });
 

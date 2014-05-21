@@ -30,6 +30,8 @@
   <object name="levelTrigger" x="2870" y="0" width="66" height="142">
    <properties>
     <property name="level" value="level02"/>
+    <property name="xSpwan" value="200"/>
+    <property name="ySpwan" value="50"/>
    </properties>
   </object>
  </objectgroup>
